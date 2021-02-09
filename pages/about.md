@@ -1,18 +1,18 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: TECHNOLOGY IS POWER
+keywords: Lei Gao, 高磊
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是高磊。
 
-仰慕「优雅编码的艺术」。
+求知若渴,虚怀若愚
 
-坚信熟能生巧，努力改变人生。
+Stay Hungry, Stay Foolish
 
 ## 联系
 
