@@ -109,8 +109,27 @@ NR 同步栅格在 FR1 上的定义如下表[^6]所示。
 | NR operating band | SS  Block SCS | SS Block pattern | Uplink range of GSCN (First – \<Step size\> – Last) |
 | ---- | ---- | ---- | ---- |
 | n1 | 15kHz | Case A | 5279 - \<1> - 5419 |
-| 
+| n3 | 15kHz | Case A | 4517 - \<1> - 4693 |
+| n5 | 15kHz | Case A | 2177 - \<1> - 2230 |
+|    | 30kHz | Case B | 2183 - \<1> - 2224 |
+| ...| ... | ... | ... |
+| n41 | 15kHz | Case A | 6246 - \<3> - 6717 |
+|    | 30kHz | Case C | 6252 - \<3> - 6714 |
 
+NR 同步栅格在 FR2 上的定义如下表[^7]所示。
+
+| NR operating band | SS  Block SCS | SS Block pattern | Uplink range of GSCN (First – \<Step size\> – Last) |
+| ---- | ---- | ---- | ---- |
+| n257 | 120kHz | Case D | 22388 - \<1> - 22558 |
+|    | 240kHz | Case E | 22390 - \<2> - 22556 |
+| n258 | 120kHz | Case D | 22257 - \<1> - 22443 |
+|    | 240kHz | Case E | 22258 - \<2> - 22442 |
+| n260 | 120kHz | Case D | 22995 - \<1> - 23166 |
+|    | 240kHz | Case E | 22996 - \<2> - 23164 |
+| n261 | 120kHz | Case D | 22446 - \<1> - 22492 |
+|    | 240kHz | Case E | 22446 - \<2> - 22490 |
+
+从上述两表可以看出，大部分的 NR 同步栅格与全局同步栅格一致，但是在高频范围，NR 同步栅格会按一定比例放大栅格之间的间隔以减小终端同步搜索的次数。
 
 
 
@@ -118,7 +137,8 @@ NR 同步栅格在 FR1 上的定义如下表[^6]所示。
 [^2]:[38.104 - Table 5.4.2.1-1: NR-ARFCN parameters for the global frequency raster].
 [^3]:[38.104 - Table 5.4.2.3-1: Applicable NR-ARFCN per operating band in FR1].
 [^4]:[38.104 - Table 5.4.2.3-2: Applicable NR-ARFCN per operating band in FR2].
-[^5]:[38.104 - Table 5.4.3.1-1: GSCN parameters for the global frequency raster]
-
+[^5]:[38.104 - Table 5.4.3.1-1: GSCN parameters for the global frequency raster].
+[^6]:[38.104 - Table 5.4.3.3-1: Applicable SS raster entries per operating band (FR1)].
+[^7]:[38.104 - Table 5.4.3.3-2: Applicable SS raster entries per operating band (FR2)]
 
 
