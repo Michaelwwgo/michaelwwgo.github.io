@@ -10,13 +10,13 @@ keywords: 5G, 频谱
 
 理论上，5G通信可用的频谱可以是 0~100GHz，但是目前 R17 中定义的 5G NR 的工作范围如下表[^1]所示。
 
-
 | Frequency range designation | Corresponding frequency range |
 | ---- | ---- |
 | FR1  | 410 MHz – 7125 MHz |
 | FR2  | 24250 MHz – 52600 MHz |
 
 ## 信道栅格（Channel Raster）
+
 信道栅格定义为可以部署小区（至少理论上）的一系列特定频点。5G 将频谱资源划分为信道栅格与同步栅格，分别用来传输同步信号（i.e. SSB/PBCH-block）和其他信令（包括除同步信号外的其他信令）与数据信号。具体缘由先按下不表。
 
 ### 全局信道栅格（Global Channel Raster）
@@ -34,6 +34,7 @@ keywords: 5G, 频谱
 $$F_{REF} = F_{REF-Offs} + ΔF_{Global} (N_{REF} – N_{REF-Offs}).$$
 
 ### NR 信道栅格（Channel Raster）
+
 理论上，全局信道栅格都可以用来部署小区。但是实际上小区只能定义在特定频点。NR 信道栅格就是在全局信道栅格的基础上进一步进行定义，主要是选取了特定的频点以及配置了不同的栅格粒度。
 NR 信道栅格在 FR1 上的定义如下表[^3]所示。篇幅所致，只截取部分表格。
 
@@ -89,11 +90,12 @@ $$F_{REF} = F_{REF-Offs} + ΔF_{Global} (N_{REF} – N_{REF-Offs})=0+5*（537999
 
 | Frequency Range | SS block frequency position $SS_{REF}$ | GSCN | Range of GSCN|
 | ---- | ---- | ---- | ---- |
-| 0 - 3000MHz | N * 1200kHz + M * 50 kHz;N=1:2499, M={1,3,5} (Default M=3) | 3N + (M -3) / 2 | 2 - 7498 |
-| 3000 - 24250MHz |　3000 MHz + N * 1.44 MHz;N= 0:14756 | 7499 + N | 7499 - 22255 |
+| 0 - 3000MHz | N \* 1200kHz + M * 50 kHz;N=1:2499, M={1,3,5} (Default M=3) | 3N + (M -3) / 2 | 2 - 7498 |
+| 3000 - 24250MHz |　3000MHz + N * 1.44 MHz;N= 0:14756 | 7499 + N | 7499 - 22255 |
 | 24250 - 100000MHz | 24250.08 MHz + N * 17.28 MHz;N = 0:4383 | 22256 + N | 22256 - 26639 |
 
 由上表可以看出：
+
 1. 在 0 - 3GHz 范围内，同步栅格的基本粒度是 1.22MHz，两组同步栅格之间相隔 1.22MHz。之所以说是两组，是因为除了由 N 决定的 一个大的间隔之外。还有一个由 M 决定的正负 100kHz 的偏移。
 2. 在 3GHz - 24.25GHz 范围，同步栅格的基本粒度是 1.44MHz。
 3. 在 24.25GHz - 100GHz 范围，同步栅格的基本粒度是 17.28MHz。
@@ -129,14 +131,16 @@ NR 同步栅格在 FR2 上的定义如下表[^7]所示。
 
 从上述两表可以看出，大部分的 NR 同步栅格与全局同步栅格一致，但是在高频范围，NR 同步栅格会按一定比例放大栅格之间的间隔以减小终端同步搜索的次数。
 
+[^1]: [38.101-1 - Table 5.1-1: Definition of frequency ranges].
 
+[^2]: [38.104 - Table 5.4.2.1-1: NR-ARFCN parameters for the global frequency raster].
 
-[^1]:[38.101-1 - Table 5.1-1: Definition of frequency ranges].
-[^2]:[38.104 - Table 5.4.2.1-1: NR-ARFCN parameters for the global frequency raster].
-[^3]:[38.104 - Table 5.4.2.3-1: Applicable NR-ARFCN per operating band in FR1].
-[^4]:[38.104 - Table 5.4.2.3-2: Applicable NR-ARFCN per operating band in FR2].
-[^5]:[38.104 - Table 5.4.3.1-1: GSCN parameters for the global frequency raster].
-[^6]:[38.104 - Table 5.4.3.3-1: Applicable SS raster entries per operating band (FR1)].
-[^7]:[38.104 - Table 5.4.3.3-2: Applicable SS raster entries per operating band (FR2)]
+[^3]: [38.104 - Table 5.4.2.3-1: Applicable NR-ARFCN per operating band in FR1].
 
+[^4]: [38.104 - Table 5.4.2.3-2: Applicable NR-ARFCN per operating band in FR2].
 
+[^5]: [38.104 - Table 5.4.3.1-1: GSCN parameters for the global frequency raster].
+
+[^6]: [38.104 - Table 5.4.3.3-1: Applicable SS raster entries per operating band (FR1)].
+
+[^7]: [38.104 - Table 5.4.3.3-2: Applicable SS raster entries per operating band (FR2)].
